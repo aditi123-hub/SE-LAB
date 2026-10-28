@@ -1,52 +1,65 @@
 # Lab 5: Static Code Analysis — Dairy Milk Collection Ledger
 Forked Repo Link-https://github.com/aditi123-hub/L5_26_dairy_collection
+## Objective
+To perform static code analysis on a Python program using Pylint, Bandit, and Flake8, identify code quality and security issues, and fix the reported issues.
 
-**Your file:** `dairy_collection.py`
+## Tools Used
+- **Pylint** — checks code quality, style, naming conventions, and documentation.
+- **Bandit** — identifies potential security vulnerabilities in Python code.
+- **Flake8** — checks Python code for style violations and formatting issues.
 
-Follow the lab handout for the full instructions.
+## Project Structure
 
-## About the program
+```text
+Lab 5/
+├── dairy_collection.py
+├── pylint_before.txt
+├── pylint_final.txt
+├── bandit_before.txt
+├── bandit_final.txt
+├── flake8_before.txt
+├── flake8_final.txt
+├── issues.md
+├── reflection.md
+└── README.md
+```
 
-A collection ledger for a dairy cooperative. It records each farmer's milk deliveries, totals a day's collection, finds the top supplier, flags low-fat milk and prints collection slips.
+## Procedure
 
-The code works, but only just. It has quality, style and security problems of the kind Pylint, Flake8 and Bandit are built to find.
+1. Ran Pylint, Bandit, and Flake8 on the original Python program.
+2. Saved the initial reports in the corresponding `*_before.txt` files.
+3. Identified code quality, security, and formatting issues.
+4. Modified the Python program to address the identified issues.
+5. Ran all three tools again and saved the final reports.
+6. Documented the issues and reflections in `issues.md` and `reflection.md`.
 
-## What to do
+## Changes Made
 
-1. **Run it first** and read the output carefully:
-   ```bash
-   python dairy_collection.py
-   ```
-   It runs a short demonstration and may create a small output file in the current folder, so run it from a folder you don't mind adding files to.
+- Added module and function docstrings.
+- Improved function and variable naming conventions.
+- Removed unused imports.
+- Fixed line-length and formatting violations.
+- Replaced SQL string construction with parameterized queries.
+- Replaced MD5 hashing with SHA-256.
+- Removed shell command execution and used Python's `print()` function instead.
+- Corrected comparisons with `None`.
 
-2. **Install the tools:**
-   ```bash
-   pip install pylint bandit flake8
-   ```
+## Results
 
-3. **Run the analysis** and save the reports:
-   ```bash
-   pylint dairy_collection.py > pylint_report.txt
-   bandit -r dairy_collection.py > bandit_report.txt
-   flake8 dairy_collection.py > flake8_report.txt
-   ```
-
-4. **Document the issues** in `issues.md` using this table (at least 4 rows, high and medium severity first):
-
-   | Issue | Type | Line(s) | Description | Fix Approach |
-   |-------|------|---------|-------------|--------------|
-   | ... | ... | ... | ... | ... |
-
-5. **Fix the code.** Fix at least 4 of the issues you documented, then rerun all three tools to confirm they are gone. Repeat until you are satisfied. The program should still do its job when you are done.
-
-6. **Reflect.** Answer the four reflection questions from the handout in `reflection.md`.
+| Tool | Before | After |
+|---|---|---|
+| Pylint | 2.00/10 | 10.00/10 |
+| Bandit | 3 reported issues | 0 reported issues |
+| Flake8 | 7 violations | 0 violations |
 
 ## Deliverables
 
-1. `dairy_collection.py`: your cleaned version, with at least 4 issues fixed.
-2. `issues.md`: the completed issue table.
-3. `reflection.md`: your answers to the reflection questions.
+- `dairy_collection.py` — corrected Python source code.
+- Before-and-after reports for Pylint, Bandit, and Flake8.
+- `issues.md` — issues identified and fixes applied.
+- `reflection.md` — reflection on the static analysis process.
 
-**Target:** aim for a Pylint score above 9.5 on your final file. A perfect 10.00/10 is very good.
+## Conclusion
 
-Be ready to explain the bugs you found and how you fixed them. You may be called on to present.
+Static code analysis helped identify and resolve code quality, security, and formatting issues. After making the corrections, the program achieved a Pylint score of 10.00/10, with no issues reported by Bandit or Flake8.
+
