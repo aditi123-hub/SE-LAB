@@ -1,5 +1,7 @@
 # Lab 7 – Fuzz Testing
 
+Forked repo link- https://github.com/aditi123-hub/L6_L7_26_loan_eligibility/tree/main/Lab%207
+
 ## Files
 
 - loan_eligibility.py – Fixed application code
